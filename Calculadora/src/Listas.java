@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Luis
  */
-public class main {
+public class Listas {
 
     /**
      * @param args the command line arguments
@@ -56,9 +56,9 @@ public class main {
                 case 3:
                     for (int j =0; j < 10; j++){
                         System.out.print(misNodos[j].toString().concat(", "));
-                    }
-                    System.out.println();
-                    break;
+                }
+                System.out.println();
+                break;
             }
             i++;
         }
