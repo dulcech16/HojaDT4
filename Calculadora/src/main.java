@@ -15,33 +15,33 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         Lista<Integer> _lista = new Lista<Integer>();
         Scanner _in = new Scanner(System.in);
         
-        Calculadora<Integer> nuevaCalculadora = new Calculadora<Integer>(2);
-        Calculadora<String> nuevaCalculadoraString = new Calculadora<String>("2");
+        Nodo<Integer> nuevoNodo = new Nodo<Integer>(2);
+        Nodo<String> nuevoNodoString = new Nodo<String>("2");
+        // Nodo<Nodo> nuevoNodoNodo = new Nodo<> (new Nodo());
         
-        Calculadora<Integer>[] misNodos;
-        miCalculadora = (Calculadora[])Array.newInstance(Nodo.class, 10);
-        miCalculadora[0] = new Calculadora<Integer>(1);
-        miCalculadora[1] = new Calculadora<Integer>(8);
-        miCalculadora[2] = new Calculadora<Integer>(1);
-        miCalculadora[3] = new Calculadora<Integer>(7);
-        miCalculadora[4] = new Calculadora<Integer>(4);
-        miCalculadora[5] = new Calculadora<Integer>(9);
-        miCalculadora[6] = new Calculadora<Integer>(2);
-        miCalculadora[7] = new Calculadora<Integer>(3);
-        miCalculadora[8] = new Calculadora<Integer>(8);
-        miCalculadora[9] = new Calculadora<Integer>(0);
+        Nodo<Integer>[] misNodos;
+        misNodos = (Nodo[])Array.newInstance(Nodo.class, 10);
+        misNodos[0] = new Nodo<Integer>(1);
+        misNodos[1] = new Nodo<Integer>(8);
+        misNodos[2] = new Nodo<Integer>(1);
+        misNodos[3] = new Nodo<Integer>(7);
+        misNodos[4] = new Nodo<Integer>(4);
+        misNodos[5] = new Nodo<Integer>(9);
+        misNodos[6] = new Nodo<Integer>(2);
+        misNodos[7] = new Nodo<Integer>(3);
+        misNodos[8] = new Nodo<Integer>(8);
+        misNodos[9] = new Nodo<Integer>(0);
         
         int opcion = 0;
         int i = 0;
         
         while (opcion!= 4){
-            System.out.print("1. Agregar resultado a lista\n");
-            System.out.print("2. Mostrar lista de resultados\n");
-            System.out.print("3. Mostrar Vector Resultados\n");
+            System.out.print("1. Agregar nodo a lista\n");
+            System.out.print("2. Mostrar lista de nodos\n");
+            System.out.print("3. Mostrar Vector Nodos\n");
             System.out.print("4. Salir\n");
             opcion = _in.nextInt();
             switch(opcion)
@@ -55,12 +55,12 @@ public class main {
                     break;
                 case 3:
                     for (int j =0; j < 10; j++){
-                        System.out.print(miCalculadora[j].toString().concat(", "));
+                        System.out.print(misNodos[j].toString().concat(", "));
                     }
                     System.out.println();
                     break;
             }
             i++;
-        } 
+        }
     }
 }

@@ -11,25 +11,25 @@ import java.util.Set;
  */
 public abstract class Lista<T> {
     
-    protected Calculadora<T> Cabeza;
-    protected Calculadora<T> Actual;
+    protected Nodo<T> Cabeza;
+    protected Nodo<T> NodoActual;
     
   
     
     public void Lista(){
-        Actual = Cabeza;
+        NodoActual = Cabeza;
 
     }
 
     abstract public void Agregar(T valor);
     
-    abstract public Calculadora Eliminar(T valor);
+    abstract public Nodo Eliminar(T valor);
 
 
     public String toString(){
-        Calculadora Inicio = Cabeza;
+        Nodo Inicio = Cabeza;
         String strLista = "";
-        StringBuilder _sb = new StringBuilder();
+        StringBuilder _sb = new    StringBuilder();
 
         if (Inicio != null){        
             while (Inicio.getSiguiente() != null)
@@ -46,4 +46,3 @@ public abstract class Lista<T> {
      }
 
 }
-

@@ -8,57 +8,57 @@
  *
  * @author Dulce
  */
-public class Calculadora<T> implements Comparable {
-    private T _valor;
-    private Calculadora _siguiente;
-    
-    public Calculadora (){
+public class NodoSimple<T> extends Nodo implements Comparable{
+
+    NodoSimple(){
         _valor = null;
         _siguiente = null;
-    }
-    
-    public Calculadora (T valor){
+    }    
+
+    public NodoSimple(T valor){
         _valor = valor;
         _siguiente = null;
     }
     
-    public Calculadora (T valor, Calculadora siguiente){
+    public NodoSimple(T valor, Nodo siguiente){
         _valor = valor;
         _siguiente = siguiente;
     }
-    
-    public void setValor(T valor){
+
+
+    @Override
+    public void setValor(Object valor) {
         this._valor = valor;
     }
 
-
-    public void setSiguiente(Calculadora siguiente){
-        _siguiente =  siguiente;
+    @Override
+    public void setSiguiente(Nodo siguiente) {
+        _siguiente = siguiente;
     }
 
-    public T getValor(){
+    @Override
+    public Object getValor() {
         return _valor;
     }
 
-    public Calculadora getSiguiente(){
+    @Override
+    public Nodo getSiguiente() {
         return _siguiente;
     }
 
     @Override
-    public String toString()
-    {
-        return _valor.toString();
+    public String toString() {
+        return  _valor.toString() ;
     }
 
     @Override
-    public boolean equals(Object other)
-    {
-        return this._valor == ((Calculadora)other).getValor();
+    public boolean Equals(Object other) {
+        return this._valor == ((Nodo)other).getValor();
     }
-    
+
     @Override
     public int compareTo(Object other) {
         return ((Comparable) _valor).compareTo(other);
     }
-    
 }
+
