@@ -15,25 +15,25 @@ public class Calculadora{
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Lista<Integer> _lista = new Lista<Integer>();
+        ListaSimple<Integer> _lista = new ListaSimple<Integer>();
         Scanner _in = new Scanner(System.in);
         
-        Nodo<Integer> nuevoNodo = new Nodo<Integer>(2);
-        Nodo<String> nuevoNodoString = new Nodo<String>("2");
+        NodoSimple<Integer> nuevoNodo = new NodoSimple<Integer>(2);
+        NodoSimple<String> nuevoNodoString = new NodoSimple<String>("2");
         // Nodo<Nodo> nuevoNodoNodo = new Nodo<> (new Nodo());
         
         Nodo<Integer>[] misNodos;
         misNodos = (Nodo[])Array.newInstance(Nodo.class, 10);
-        misNodos[0] = new Nodo<Integer>(1);
-        misNodos[1] = new Nodo<Integer>(8);
-        misNodos[2] = new Nodo<Integer>(1);
-        misNodos[3] = new Nodo<Integer>(7);
-        misNodos[4] = new Nodo<Integer>(4);
-        misNodos[5] = new Nodo<Integer>(9);
-        misNodos[6] = new Nodo<Integer>(2);
-        misNodos[7] = new Nodo<Integer>(3);
-        misNodos[8] = new Nodo<Integer>(8);
-        misNodos[9] = new Nodo<Integer>(0);
+        misNodos[0] = new NodoSimple<Integer>(1);
+        misNodos[1] = new NodoSimple<Integer>(8);
+        misNodos[2] = new NodoSimple<Integer>(1);
+        misNodos[3] = new NodoSimple<Integer>(7);
+        misNodos[4] = new NodoSimple<Integer>(4);
+        misNodos[5] = new NodoSimple<Integer>(9);
+        misNodos[6] = new NodoSimple<Integer>(2);
+        misNodos[7] = new NodoSimple<Integer>(3);
+        misNodos[8] = new NodoSimple<Integer>(8);
+        misNodos[9] = new NodoSimple<Integer>(0);
         
         int opcion = 0;
         int i = 0;

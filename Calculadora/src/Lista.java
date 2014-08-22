@@ -9,7 +9,7 @@ import java.util.Set;
  *
  * @author Dulce
  */
-public abstract class Lista<T> {
+public abstract class Lista<T> implements iLista {
     
     protected Nodo<T> Cabeza;
     protected Nodo<T> NodoActual;
@@ -21,12 +21,10 @@ public abstract class Lista<T> {
 
     }
 
-    abstract public void Agregar(T valor);
+    public void Agregar(){}
+    public void Eliminar(){}
     
-    abstract public Nodo Eliminar(T valor);
-
-
-    public String toString(){
+     public String toString(){
         Nodo Inicio = Cabeza;
         String strLista = "";
         StringBuilder _sb = new    StringBuilder();
