@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Luis
  */
-public class Listas {
+public class Calculadora{
 
     /**
      * @param args the command line arguments
